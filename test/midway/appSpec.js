@@ -10,7 +10,7 @@ describe("Midway: Testing Modules", function() {
     });
 
     it("should be registered", function() {
-      expect(module).not.to.equal(null);
+      expect(module).not.toEqual(null);
     });
 
     describe("Dependencies:", function() {
@@ -25,23 +25,23 @@ describe("Midway: Testing Modules", function() {
 
       //you can also test the module's dependencies
       it("should have App.Controllers as a dependency", function() {
-        expect(hasModule('App.Controllers')).to.equal(true);
+        expect(hasModule('App.Controllers')).toEqual(true);
       });
 
       it("should have App.Directives as a dependency", function() {
-        expect(hasModule('App.Directives')).to.equal(true);
+        expect(hasModule('App.Directives')).toEqual(true);
       });
 
       it("should have App.Filters as a dependency", function() {
-        expect(hasModule('App.Filters')).to.equal(true);
+        expect(hasModule('App.Filters')).toEqual(true);
       });
 
       it("should have App.Routes as a dependency", function() {
-        expect(hasModule('App.Routes')).to.equal(true);
+        expect(hasModule('App.Routes')).toEqual(true);
       });
 
       it("should have App.Services as a dependency", function() {
-        expect(hasModule('App.Services')).to.equal(true);
+        expect(hasModule('App.Services')).toEqual(true);
       });
     });
   });
