@@ -13,7 +13,7 @@ describe("Midway: Testing Requests", function() {
 
   it("should goto the videos_path by default", function(done) {
     tester.visit('/', function() {
-      expect(tester.viewElement().html()).to.contain('app-youtube-listings');
+      expect(tester.viewElement().html()).toContain('app-youtube-listings');
       done();
     });
   });
@@ -22,9 +22,9 @@ describe("Midway: Testing Requests", function() {
     var url = ROUTER.routePath('video_path', { id : 10 });
     tester.visit(url, function() {
       var $params = tester.inject('$routeParams');
-      expect(parseInt($params.id)).to.equal(10);
+      expect(parseInt($params.id)).toEqual(10);
 
-      expect(tester.viewElement().html()).to.contain('app-youtube-profile');
+      expect(tester.viewElement().html()).toContain('app-youtube-profile');
       done();
     });
   });
@@ -32,7 +32,7 @@ describe("Midway: Testing Requests", function() {
   it("should have a working other_path request", function(done) {
     var url = ROUTER.routePath('other_path');
     tester.visit(url, function() {
-      expect(tester.viewElement().html()).to.contain('other page');
+      expect(tester.viewElement().html()).toContain('other page');
       done();
     });
   });
